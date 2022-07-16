@@ -1,0 +1,189 @@
+
+*{margin:0;padding: 0;font-size:14px; font-family:Helvetica,Tahoma,Verdana,新宋体; -webkit-tap-highlight-color: rgba(0,0,0,0); font-weight: 400;}
+html{background: #e6e6e6; height: 100%;}
+body{ max-width: 500px; height: 100vh; margin: 0 auto; background: #e6e6e6;}
+a{ text-decoration:none;}
+ul li{list-style: none; }
+input:not([type="checkbox"]){-webkit-appearance:none; outline: none;}
+input[type=number] {
+    -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.inp-text{ height:40px; border:0; width:100% ; font-size:16px; margin-top:2px; margin-bottom:2px; color: #484646}
+.btn {margin: 5% 5%; width: 90%; height: 50px; border-radius: 30px; text-align: center; background: #2fb4ff; border:0; color: #ffffff; font-size: 16px; box-shadow: 0px 2px 7px 0px rgba(85,110,97,0.35);}
+.line-half-demo {
+    width: 100%;
+    height: 1px;
+    background-color: #b7adad;
+    transform: scaleY(0.5);
+    transform-origin: 0 0;
+}
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.btn-baitiao-pay {background: #0897e2;}
+
+.container { background: #fff; width: calc(100% - 20px); min-height:100vh; margin: 0 5px; padding: 0 5px}
+.navbar-top { text-align: center; padding: 10px 0;}
+.navbar-top .title { padding: 10px; margin-top: 10px;}
+.navbar-top .content { width: calc(100% - 20px); line-height: 40px; padding: 10px;}
+.navbar-top .content .inp-text-amount{height: 60px !important; width: calc(100%) !important; font-weight: 200; text-align: center; font-size: 42px; background: url('../images/jpy.png'); background-repeat:no-repeat; background-size:32px 32px; background-position:left;}
+
+.navbar-center { padding: 10px 0 100px 0}
+.navbar-center .title { margin: 0 16px; font-size: 18px;}
+.navbar-center .content {margin-top: 10px; padding: 0 10px;}
+.navbar-center .content > ul > li { padding: 10px;}
+.navbar-center .content > ul > li > .p-lab {height: 40px; }
+.navbar-center .content > ul > li > .p-context {margin-top: 14px; display: none;}
+.navbar-center .content > ul > li svg { font-size: 40px;}
+.navbar-center .content .pay-way { display: inline-block; margin: 0 10px;}
+.navbar-center .content .pay-way span { display: block;}
+.pay-way-checkbox { display: inline-block; float: right; line-height: 40px;}
+.pay-way-checkbox span { color: #e4e2e2;}
+.pay-way span:first-child {}
+.pay-way span:last-child {font-size: 10px; color: #b7adad;}
+.active .pay-way-checkbox span { color: #149ce4; }
+.active .p-context { display: block !important;}
+
+
+/* 底部 */
+.bottom-fixed{ position:fixed; bottom:0px; z-index: 998; max-width: 500px; width: 100%;}
+
+.grid-container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr); /* 相当于 1fr 1fr 1fr */
+    grid-template-rows: repeat(2, 1fr); /* fr单位可以将容器分为几等份 */
+}
+.grid-item {
+    height: 100%;
+    line-height: 100%;
+}
+.grid-item div :first-child {
+    position: relative;
+}
+.grid-item .stage {
+    margin: 5px 8px;
+    padding: 10px 0;
+    height: 50px;
+    text-align: center;
+    line-height: 26px;
+    background: #f9f9f9;
+}
+.stage div:last-child {
+    font-size: 10px; color: #b7adad;
+}
+
+.stage-default:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    border: 1px solid #b7adad;
+    border-radius: 10px;/* 也可以设置圆角 */
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+    -o-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.grid-item .stage-selected {
+    margin: 5px 8px;
+    height: 50px;
+    text-align: center;
+    line-height: 26px;
+    background: #00fff312 !important;
+    box-shadow: 0px 2px 7px 0px rgba(85,110,97,0.35);
+    border-radius: 5px;
+    border:1px solid #2fb4ff;
+}
+.stage div:last-child {
+    font-size: 10px; color: #b7adad;
+}
+
+/* 角标 */
+.stage-selected:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 14px solid #2fb4ff;
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+
+/* content属性特殊字符 实现, 如果存在兼容问题，请选择 border 旋转实现 */
+.stage-selected:after {
+    /* content: '✔'; */
+    content: '\2714';
+    position: absolute;
+    right: 0px;
+    bottom: -2px;
+    color: #fff;
+}
+
+/* border旋转实现 勾选 */
+.stage-selected-0:after {
+    content: '';
+    width: 4px;
+    height: 9px;
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(42deg);
+}
+
+.keybox {
+    position: fixed;
+    max-width: 490px;
+    width: 100%;
+    margin-left: 5px;
+    text-align: center;
+    bottom: 0;
+    background:#fbfbfb;
+}
+.keybox table {width: 100%;background:#d9d9d9;}
+.keybox table td {
+    position: relative;
+    background: #fbfbfb;
+    padding: 15px;
+    font-size: 34px;
+    color:#333;
+    width: 25%;
+}
+.keybox table td .iconfont {
+    font-size: 32px;
+    /* vertical-align: inherit; */
+}
+.keybox table td:active::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 5%)
+}
+.dn {display: none;}

@@ -1,0 +1,20 @@
+[
+  {
+    "monthMoney": 23.00,
+    "month": "3",
+    "monthFree": "0.23",
+    "monthRate": "0.56"
+  },
+  {
+    "monthMoney": 23.00,
+    "month": "6",
+    "monthFree": "0.23",
+    "monthRate": "0.78"
+  },
+  {
+    "monthMoney": 23.00,
+    "month": "9",
+    "monthFree": "0.23",
+    "monthRate": "0.92"
+  }
+]

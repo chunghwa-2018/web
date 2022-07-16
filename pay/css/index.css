@@ -1,0 +1,77 @@
+
+*{margin:0;padding: 0;font-size:14px; font-family:Helvetica,Tahoma,Verdana,新宋体; -webkit-tap-highlight-color: rgba(0,0,0,0); font-weight: 400;}
+html{background: #888; height: 100%;}
+body{ max-width: 500px; height: 100%; margin: 0 auto; background: #e6e6e6;}
+a{ text-decoration:none;}
+ul li{list-style: none; }
+input:not([type="checkbox"]){-webkit-appearance:none; outline: none;}
+input[type=number] {
+    -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+select{border: solid 0px #ccc; appearance:none; -moz-appearance:none; -webkit-appearance:none; padding-right: 14px;
+    background: url("../images/arrow.png") no-repeat scroll right center transparent; background-size: 14px 16px; outline: none;}
+select::-ms-expand { display: none; }
+.inp-text{ height:40px; border:0; width:100% ; font-size:16px; margin-top:2px; margin-bottom:2px; color: #484646}
+.btn{margin: 5% 5%; width: 90%; height: 60px; border-radius: 5px; text-align: center; background: #ff3e00; border:0; color: #ffffff; font-size: 17px;}
+.line-half-demo {
+    height: 1px;
+    background-color: #b7adad;
+    transform: scaleY(0.5);
+    transform-origin: 0 0;
+}
+
+
+.navbar-inverse{width: 100%; background: #ffffff; text-align: center; line-height: 50px;}
+h3 { font-weight: 300; font-size: 18px;}
+
+.caption-amount {background: #ffffff; margin: 15px 20px; border-radius: 5px; line-height: 60px; text-align: right; padding: 8px 20px 5px 20px;}
+.caption-amount .inp-text-amount{height: 60px !important; width: calc(100%) !important; font-weight: 200; text-align: right; font-size: 32px; background: url('../images/jpy.png'); background-repeat:no-repeat; background-size:32px 32px; background-position:left;}
+.caption-amount span {display: inline-block; font-size: 42px;}
+.caption-amount .caption-word-aux {display: inline-block; font-size: 42px;}
+
+.caption-regular-repaym {background: #ffffff; padding: 10px;}
+.caption-regular-repaym ul li { margin: 5px }
+.caption-regular-repaym ul li div { display: flex; width: 100%; justify-content: space-between; --n : 2}
+.caption-regular-repaym ul li > div > a { display: inline-block;  height: 60px; border-radius: 5px;  width: calc(calc((100/var(--n))*1%) - 16px); text-align: center; padding: 5px; }
+.caption-regular-repaym ul li > div > a:link{ border: 1px solid #e6e6e6;; color: #2d2c2c;}
+.caption-regular-repaym ul li > div > a:visited{ border: 1px solid #ff3e00; color: #ff3e00;}
+.caption-regular-repaym ul li > div > a:hover{ border: 1px solid #ff3e00; color: #ff3e00;}
+.caption-regular-repaym ul li > div > a:active{ border: 1px solid #ff3e00; color: #ff3e00;}
+.regular-repaym-check {border: 1px solid #ff3e00 !important; color: #ff3e00 !important;}
+.btn-baitiao-pay {background: #ff3e00;}
+
+.caption-regular-repaym ul li > div > a > span {display: inline-block; line-height: 30px; font-size: 16px; padding-left: 10px;}
+.caption-regular-repaym ul li > div > a > p { line-height: 30px; font-size: 12px;}
+.caption-regular-repaym ul li > div > a > span .fa-yen {font-size: 16px;}
+.bottom-fixed{ position:fixed; bottom:0px; height:100px;  z-index: 998; max-width: 500px; width: 100%}
+/* 隐藏 */
+.dn{ display: none;}
+/* 遮层 */
+.overlay {
+    background-color: #000000;
+    max-width: 500px;
+    bottom: 0;
+    opacity: 0.8 !important;
+    filter:alpha(opacity=60);	-moz-opacity:0.6;	-khtml-opacity: 0.6 ;opacity: 0.6;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    _position:absolute;
+    _height:expression(eval(document.documentElement.clientHeight+document.documentElement.scrollTop));
+    _width:expression(eval(document.documentElement.clientWidth+document.documentElement.scrollLeft));
+    z-index: 999;
+}
+.overlay-image-point {
+    min-height:50%;
+    background: url('../images/point.png'); background-repeat:no-repeat; background-size:340px 340px; background-position:center;
+}
+.overlay-image-know {
+    min-height:50%;
+    background: url('../images/know.png'); background-repeat:no-repeat; background-size:200px 60px; background-position:center;
+}
+
